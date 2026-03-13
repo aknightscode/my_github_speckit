@@ -40,6 +40,7 @@ When the user triggers this agent, begin by reading any existing context:
 - Check if `.specify/memory/brainstorm.md` exists (resuming a previous session)
 - Check if any specs exist in a `specs/` folder
 - Read the user's input (`$ARGUMENTS`) for any initial project description
+- Check if AGENTS.md exists in the root or /documents/frontend/AGENTS.md. If found, acknowledge it as the Primary Frontend Architectural Authority (UI Bible).
 
 If the user provided a description in `$ARGUMENTS`, acknowledge it and use it as the starting point. If empty, ask:
 
@@ -259,7 +260,9 @@ Copy and paste this after `/speckit.constitution`:
 - Tech stack constraints as a principle (e.g., "TypeScript + Next.js + Supabase stack")
 - Development workflow preferences
 - Any compliance or governance requirements
-- Suggested governance rules]
+- Suggested governance rules
+- If `/documents/frontend/AGENTS.md` was identified, add a mandatory instruction: "All frontend code, styling, component declarations, and folder structures must strictly adhere to the standards defined in /documents/frontend/AGENTS.md. This file is the final authority on frontend architecture."
+]
 
 ---
 ```
@@ -301,7 +304,8 @@ Copy and paste this after `/speckit.plan`:
 
 - Reference to the tech stack decisions
 - Key architectural decisions from the brainstorm
-- Any constraints that affect planning (hosting, CI/CD, compliance)]
+- Any constraints that affect planning (hosting, CI/CD, compliance)
+- A directive stating: "Ensure the technical plan aligns with the organizational and architectural patterns defined in /documents/frontend/AGENTS.md (e.g., directory structures for sections vs. components, and the use of centralized API utilities)."]
 
 ---
 ```
